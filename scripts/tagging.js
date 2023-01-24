@@ -1,13 +1,13 @@
 export default class Tagging {
   constructor(targetContainer, coordinateX, coordinateY) {
     this.targetContainer = targetContainer;
-    this.coordinateX = coordinateX - 30;
+    this.coordinateX = coordinateX - 33;
     this.coordinateY = coordinateY - 25;
     this.tagName = "";
   }
 
   isValidTagName() {
-    this.tagName = prompt("Enter tag name here:");
+    this.tagName = prompt("Enter Tag name here:");
     if (this.tagName !== "" && this.tagName !== null) {
       return true;
     } else {
@@ -16,22 +16,16 @@ export default class Tagging {
   }
 
   createTag() {
+    let id = crypto.randomUUID().split("-")[0];
     let tagDiv = document.createElement("div");
+    tagDiv.setAttribute("id", id);
+    tagDiv.setAttribute("title", this.tagName);
     tagDiv.classList.add("tagHidden");
     tagDiv.classList.add("tag");
     tagDiv.style.left = this.coordinateX + "px";
     tagDiv.style.top = this.coordinateY + "px";
 
-    this.createTagName(tagDiv);
-
     return tagDiv;
-  }
-
-  createTagName(tagDiv) {
-    let tagContent = document.createElement("p");
-    tagContent.innerText = this.tagName;
-    tagContent.setAttribute("style", "color: #000");
-    tagDiv.appendChild(tagContent);
   }
 
   addTag() {

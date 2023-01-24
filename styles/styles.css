@@ -20,27 +20,18 @@ body {
   background: url("../../img/kakashi2.jpg");
 }
 
-.root {
-  position: fixed;
-  height: 50px;
-  width: 70px;
-}
-
 .tag {
   position: fixed;
   height: 50px;
   width: 70px;
-  background: #fff;
-  transition: ease-in-out 250ms;
-  /* transition-duration: 500ms; */
+  border: 2px solid #fff;
+  transition: ease-in-out 200ms;
 }
 
 .tagHidden {
-  /* visibility: hidden; */
   opacity: 0;
 }
 
 .tagVisible {
-  /* visibility: visible; */
   opacity: 1;
 }
