@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #475063;
+  color: #fff;
+  height: 120vh;
+  padding: 2em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tagAreaDiv {
+  border: 1px solid #fff;
+  height: 600px;
+  width: 100%;
+  background: url("../../img/kakashi2.jpg");
+}
+
+.root {
+  position: fixed;
+  height: 50px;
+  width: 70px;
+}
+
+.tag {
+  position: fixed;
+  height: 50px;
+  width: 70px;
+  background: #fff;
+  transition: ease-in-out 250ms;
+  /* transition-duration: 500ms; */
+}
+
+.tagHidden {
+  /* visibility: hidden; */
+  opacity: 0;
+}
+
+.tagVisible {
+  /* visibility: visible; */
+  opacity: 1;
+}
