@@ -17,15 +17,18 @@ body {
   border: 1px solid #fff;
   height: 600px;
   width: 100%;
-  background: url("../../img/kakashi2.jpg");
+  background-size: 80%;
+  background: url("../../img/gojo2.jpg"), no-repeat, center;
 }
 
 .tag {
   position: fixed;
   height: 50px;
-  width: 70px;
-  border: 2px solid #fff;
-  transition: ease-in-out 200ms;
+  width: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.66);
+  border-radius: 6px;
+  pointer-events: none;
+  transition: ease-in-out 500ms;
 }
 
 .tagHidden {
@@ -33,5 +36,23 @@ body {
 }
 
 .tagVisible {
+  /* position: "relative"; */
   opacity: 1;
+}
+
+.tagVisible::before {
+  position: relative;
+  content: attr(data-before);
+  display: flex;
+  flex-direction: row;
+  top: -32px;
+  width: 200%;
+  margin: 5px;
+  padding: 7px;
+  text-align: left;
+  font-size: 12px;
+  background: lavender;
+  color: #000;
+  border-radius: 4px;
+  flex-shrink: 2;
 }
