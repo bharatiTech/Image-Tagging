@@ -68,9 +68,9 @@ export default class Tagging {
   /**
    * @method calculatePosition
    * @description Calculates the distance between cursor position and the nearest tags
-   * @param  node
-   * @param  pointerX
-   * @param  pointerY
+   * @param  {HTMLElement} node
+   * @param  {number} pointerX
+   * @param  {number} pointerY
    */
   calculatePosition(node, pointerX, pointerY) {
     /** X and Y coordinates of the tag */
@@ -97,6 +97,12 @@ export default class Tagging {
   }
 }
 
+/**
+ *
+ * @param {onMouseMove: (event: any) => void} callBackFunction
+ * @param {number} delay
+ * @returns
+ */
 export const throttling = (callBackFunction, delay) => {
   let wait = false;
   let waitingArgs = null;
